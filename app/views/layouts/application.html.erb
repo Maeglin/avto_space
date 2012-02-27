@@ -23,6 +23,7 @@ h1 span {
 	<div id = "name"><%= link_to "Avto Space", root_path %></div><div id = "logo"><img src = "<%= asset_path "logo_new.png" %>" alt = "logo" />
 	</div>
 </div>
+<div id = "menu"><%= render_navigation %></div>
 <div id = "content">
 <%= yield %>
 </div>

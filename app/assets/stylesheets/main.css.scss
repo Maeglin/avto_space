@@ -10,7 +10,7 @@ $gray: #161616;
 $black: #101010;
 
 body{
-  background-color: $gray;  
+  background-color: $gray;
   margin: 0px 0px 0px 0px;
   font-family: 'Open Sans', sans-serif;
   color: white;
@@ -68,5 +68,30 @@ body{
 #head {
   width: 75%;
   margin: 0 auto;
-  height: 175px;
+  height: 145px;
+}
+
+#menu {
+  width: 75%;
+  margin: 0 auto;
+  height: 20px;
+    
+  ul{
+    list-style: none;
+    padding-left: 0px;
+    
+    li{
+      font-size: 2em;
+      a{
+        color: #FFFFFF;
+        text-decoration: none;
+        &:visited{
+          
+        }
+        &:hover{
+          
+        }
+      }
+    }
+  }
 }
