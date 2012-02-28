@@ -1,2 +1,22 @@
+.slider-wrapper.theme-default
+  .ribbon
+  .nivoSlider{:id => "slider"}
+    %img{:src => [asset_path "gallery/toystory.jpg"], :alt => ""}
+    %img{:src => [asset_path "gallery/walle.jpg"], :alt => ""}
+    %img{:src => [asset_path "gallery/nemo.jpg"], :alt => "", :title => "#htmlcaption"}
+  .nivo-html-caption{:id => "htmlcaption"}
+    %strong
+      This
+    is an example of a 
+    %em
+      HTML
+    caption with 
+    %a{:href => "#"}
+      a link
 %h1=@title
 %p=@content
+
+:javascript
+  $(window).load(function() {
+        $('#slider').nivoSlider();
+  });

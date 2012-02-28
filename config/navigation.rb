@@ -71,6 +71,7 @@ SimpleNavigation::Configuration.run do |navigation|
     # You can turn off auto highlighting for a specific level
     # primary.auto_highlight = false
     primary.item :index, 'Главная', root_path
+    primary.item :index2, 'Главная2', asset_path("logo_new.png")
   end
 
 end

@@ -1,0 +1,119 @@
+// Place all the styles related to the Main controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$light_yellow: #d7ceb2;
+$dark_yellow: #d0a825;
+$light_blue: #40627c;
+$dark_blue: #26393d;
+$light: #fffae4;
+$gray: #161616;
+$black: #101010;
+
+@mixin op($val) { 
+  opacity: $val;
+  -moz-opacity: $val;
+  filter: alpha(opacity=($val*100));
+}
+
+body{
+  background-color: $gray;
+  margin: 0px 0px 0px 0px;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+}
+
+#logo{
+  width: 75%;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+#logo img{
+  float: right;
+}
+
+#name{
+  font-family: 'Play', sans-serif;
+  float: left;
+  a{
+    color: $light_yellow;
+    font-size: 7em;
+    text-decoration: none;
+    text-shadow: 0px 2px 3px #666;
+
+    &:hover{
+      text-decoration: none;
+      color: $light_yellow; 
+    }
+    
+    &:after{
+      color: #dbdbdb;  
+    }
+    
+    &:visited{
+      text-decoration: none;
+    }
+    
+    &:active{
+      text-decoration: none;
+    }
+  }
+}
+
+#upper{
+  background-color: $light_blue;
+  height: 30px;  
+  padding: 0px 0px 0px 0px;
+}
+
+#content{
+  width: 75%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+#head {
+  width: 75%;
+  margin: 0 auto;
+  height: 125px;
+}
+
+#menu {
+  width: 75%;
+  margin: 0 auto;
+  height: 20px;
+    
+  ul{
+    list-style: none;
+    padding-left: 0px;
+    
+    li{
+      display: inline;
+      font-size: 1.3em;
+      a{      
+        -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+        -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+        box-shadow:inset 0px 1px 0px 0px #ffffff;
+        background-color:#ededed;
+        border:1px solid #dcdcdc;
+        display:inline-block;
+        color:#777777;
+        padding:6px 24px;
+        text-shadow:1px 1px 0px #ffffff;
+        color: #777777;
+        text-decoration: none;
+        @include op(0.85);
+        &:hover{
+          background-color:#dfdfdf;
+          @include op(1);
+        }
+        &:active{
+          position:relative;
+          top:1px;
+        }
+        &.selected{
+        }
+      }
+    }
+  }
+}
