@@ -143,6 +143,26 @@ body{
   width: $width;
   margin: 0 auto;
   height: 50px;
+  #menu_footer{
+    float: left;
+    ul{
+      list-style: none;
+      margin: 0 auto;
+      padding-left: 0px;
+      li{
+        display: inline;
+        padding-right: 15px;
+        a{
+          text-decoration: none;
+          color: #FFFFFF;
+          @include op(0.4);
+          &:hover{
+            @include op(1);
+          }
+        }
+      }
+    }
+  }
   #copyright{
     float:right;
     a{
