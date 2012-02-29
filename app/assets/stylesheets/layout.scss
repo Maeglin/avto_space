@@ -8,11 +8,21 @@ $dark_blue: #26393d;
 $light: #fffae4;
 $gray: #161616;
 $black: #101010;
+$width: 55%;
 
 @mixin op($val) { 
   opacity: $val;
   -moz-opacity: $val;
   filter: alpha(opacity=($val*100));
+}
+
+@mixin border_radius($val){
+	-webkit-border-radius: $val;
+	-moz-border-radius: $val;
+	-o-border-radius: $val;
+	-ms-border-radius: $val;
+	-khtml-border-radius: $val;
+	border-radius: $val;
 }
 
 body{
@@ -23,18 +33,29 @@ body{
 }
 
 #logo{
-  width: 75%;
   margin: 0 auto;
   margin-top: 30px;
 }
 
 #logo img{
   float: right;
+  height: 100px;
+  padding-top: 15px;
+}
+
+#as_logo{
+	width: 80px;	
 }
 
 #name{
+  display: inline;
   font-family: 'Play', sans-serif;
   float: left;
+  #as_logo{
+  	margin-left: 30px;
+  	background: $light_yellow;
+  	@include border_radius(5px);
+  }
   a{
     color: $light_yellow;
     font-size: 7em;
@@ -67,19 +88,19 @@ body{
 }
 
 #content{
-  width: 75%;
+  width: $width;
   margin: 0 auto;
   margin-top: 50px;
 }
 
 #head {
-  width: 75%;
+  width: $width;
   margin: 0 auto;
   height: 125px;
 }
 
 #menu {
-  width: 75%;
+  width: $width;
   margin: 0 auto;
   height: 20px;
     
@@ -113,6 +134,23 @@ body{
         }
         &.selected{
         }
+      }
+    }
+  }
+}
+
+#footer{
+  width: $width;
+  margin: 0 auto;
+  height: 50px;
+  #copyright{
+    float:right;
+    a{
+      @include op(0.4);
+      text-decoration: none;
+      color: #FFFFFF;
+      &:hover{
+        @include op(1);
       }
     }
   }

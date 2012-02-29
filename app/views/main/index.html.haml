@@ -1,9 +1,9 @@
 .slider-wrapper.theme-default
   .ribbon
   .nivoSlider{:id => "slider"}
-    %img{:src => [asset_path "gallery/toystory.jpg"], :alt => ""}
-    %img{:src => [asset_path "gallery/walle.jpg"], :alt => ""}
-    %img{:src => [asset_path "gallery/nemo.jpg"], :alt => "", :title => "#htmlcaption"}
+    -Dir.foreach(Rails.root.join('app', 'assets', 'gallery').to_s) do |x|
+      -if x!='.' && x!='..'
+        %img{:src => [asset_path "gallery/" + x], :alt => ''}
   .nivo-html-caption{:id => "htmlcaption"}
     %strong
       This
