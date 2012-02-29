@@ -3,16 +3,15 @@
   .nivoSlider{:id => "slider"}
     -Dir.foreach(Rails.root.join('app', 'assets', 'gallery').to_s) do |x|
       -if x!='.' && x!='..'
-        %img{:src => [asset_path "gallery/" + x], :alt => ''}
+        %a{:href => [root_path]}
+          %img{:src => [asset_path "gallery/" + x], :alt => '', :title => '#htmlcaption'}
   .nivo-html-caption{:id => "htmlcaption"}
-    %strong
-      This
-    is an example of a 
-    %em
-      HTML
-    caption with 
+    %p
+      НАНОКЕРАМИКА
+    %p
+      Совершенная защита кузова автомобиля
     %a{:href => "#"}
-      a link
+      подробнее >>
 %h1=@title
 %p=@content
 

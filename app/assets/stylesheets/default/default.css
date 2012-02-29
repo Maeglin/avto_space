@@ -8,6 +8,34 @@ Author: Gilbert Pellegrom
 Author URI: http://dev7studios.com
 */
 
+.theme-default .nivo-caption {
+    bottom:15%;
+    left:auto;
+    left:0px;
+    width:auto;
+    max-width:380px;
+    overflow:hidden;
+    background:#fff;
+    font-family: 'Play', sans-serif;
+    color:#4c4b4b;
+    
+}
+.theme-default .nivo-caption p {
+    padding:5px 15px;
+    color:#333;
+    font-weight:bold;
+    font-size:27px;
+}
+.theme-default .nivo-caption a { 
+    color:#333;
+    font-family: 'Play', sans-serif;
+    font-weight:bold;
+    font-size:0.7em;
+    float: right;
+    text-decoration: none;
+    font-style: italic;
+}
+
 .theme-default .nivoSlider {
 	position:relative;
 	background:#fff url(loading.gif) no-repeat 50% 50%;
@@ -64,15 +92,4 @@ Author URI: http://dev7studios.com
 }
 .theme-default a.nivo-prevNav {
 	left:15px;
-}
-
-.theme-default .nivo-caption {
-    font-family: Helvetica, Arial, sans-serif;
-}
-.theme-default .nivo-caption a {
-    color:#fff;
-    border-bottom:1px dotted #fff;
-}
-.theme-default .nivo-caption a:hover {
-    color:#fff;
 }

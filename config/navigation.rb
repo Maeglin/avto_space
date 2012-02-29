@@ -77,7 +77,7 @@ SimpleNavigation::Configuration.run do |navigation|
     primary.item :photo, 'Фото', asset_path("logo_new.png")
     primary.item :video, 'Видео', asset_path("logo_new.png")
     primary.item :price, 'Цены', asset_path("logo_new.png")
-    primary.item :contacts, 'Контакты', asset_path("logo_new.png")
+    primary.item :contacts, 'Контакты ', contacts_path
   end
 
 end

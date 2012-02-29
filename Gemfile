@@ -7,15 +7,19 @@ gem 'rails', '3.2.1'
 
 gem 'sqlite3'
 
-gem 'formtastic'
+gem 'simple_form'
 
 gem 'sass'
+
+gem 'resque_mailer'
 
 gem 'mini_magick'
 
 gem 'simple-navigation'
 
 gem 'datagrid'
+
+gem 'gmaps4rails'
 
 gem 'haml'
 
@@ -24,6 +28,7 @@ gem 'json'
 gem 'compass'
 
 gem 'haml-rails'
+
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -34,6 +39,7 @@ group :assets do
   # gem 'therubyracer'
 
   gem 'uglifier', '>= 1.0.3'
+  gem 'bootstrap-sass'
 end
 
 gem 'jquery-rails'

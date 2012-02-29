@@ -1,7 +1,12 @@
 AvtoSpace::Application.routes.draw do
+  resources :contacts
+
+  get "contacts/index"
+
   get "main/index"
 
   root :to => "main#index"
+  match "contacts/" => "contacts#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

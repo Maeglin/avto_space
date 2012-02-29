@@ -8,7 +8,7 @@ $dark_blue: #26393d;
 $light: #fffae4;
 $gray: #161616;
 $black: #101010;
-$width: 55%;
+$width: 1056px;
 
 @mixin op($val) { 
   opacity: $val;
@@ -115,12 +115,12 @@ body{
         -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
         -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
         box-shadow:inset 0px 1px 0px 0px #ffffff;
+        text-shadow:1px 1px 0px #ffffff;
         background-color:#ededed;
         border:1px solid #dcdcdc;
         display:inline-block;
         color:#777777;
         padding:6px 24px;
-        text-shadow:1px 1px 0px #ffffff;
         color: #777777;
         text-decoration: none;
         @include op(0.85);
@@ -133,6 +133,9 @@ body{
           top:1px;
         }
         &.selected{
+          text-shadow: 1px 1px 0px lighten($light_blue, 10%);
+          background-color:$light_blue;
+          color: #dfdfdf;
         }
       }
     }
