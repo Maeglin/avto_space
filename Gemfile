@@ -11,6 +11,8 @@ gem 'simple_form'
 
 gem 'sass'
 
+gem 'capistrano'
+
 gem 'resque_mailer'
 
 gem 'mini_magick'
