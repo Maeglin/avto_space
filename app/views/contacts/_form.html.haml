@@ -1,0 +1,15 @@
+= simple_form_for :message, :url => { :action => "create" }, :html => { :method => :post } do |f|
+  %p
+    = f.label "Name"
+  %p
+    = f.text_field :name
+  %p
+    = f.label "Email"
+  %p
+    = f.text_field :email
+  %p
+    = f.label "Message"
+  %p
+    = f.text_area :text
+  %p
+    = f.submit "Submit"
