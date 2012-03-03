@@ -1,7 +1,50 @@
-%p Адрес: г.Москва, ул. Верейская, 29
-%p Телефон: +7 (495) 644-61-63
-%p          +7 (916) 310-19-84
-%p Email: 
+:javascript
+  YMaps.jQuery(function () {
+            // Создание экземпляра карты и его привязка к созданному контейнеру
+            var map = new YMaps.Map(YMaps.jQuery("#YMapsID")[0]);
 
-#message_form
-  =render 'form'
+            // Установка для карты ее центра и масштаба
+            map.setCenter(new YMaps.GeoPoint(37.436251, 55.711012), 15);
+
+            // Добавление меток на карту
+            var placemark = new YMaps.Placemark(new YMaps.GeoPoint(37.436251, 55.711012));
+            placemark.name = "Авто Спейс";
+            placemark.description = "ул. Верейская, 29";
+            map.addOverlay(placemark);
+
+            // Открываем балун
+            placemark.openBalloon();
+            map.addControl(new YMaps.TypeControl());
+            map.addControl(new YMaps.ToolBar());
+            map.addControl(new YMaps.Zoom());
+            map.addControl(new YMaps.ScaleLine());
+   });
+   
+
+#info
+  %span Контакты
+  %p Адрес: &nbsp;г.Москва, ул. Верейская, 29
+  %p Телефон: &nbsp;+7 (495) 644-61-63, +7 (916) 310-19-84
+  %p Email:
+
+#YMapsID
+
+.cont_title
+  Форма обратной связи
+=render 'form'
+
+:javascript
+  $('form#ajaxform').bind('ajax:beforeSend', function() {
+     $('#btn').attr('disabled', 'disabled');
+     $('#btn').css('cursor', 'default');
+     $('#btn:hover').css('background-color', '#ededed');
+     $('#btn').val('Отправляется...');
+   });
+  $('form#ajaxform').bind('ajax:complete', function() { 
+    $().toastmessage('showSuccessToast', 'Сообщение успешно отправлено.');
+    $('#btn').css('cursor', 'pointer');
+    $('#btn').removeAttr("disabled"); 
+    $('#btn').val('Отправить');
+    $('#btn:hover').css('background-color','#ffffff');
+    $('#message_text').val('');
+  });

@@ -21,8 +21,6 @@ gem 'simple-navigation'
 
 gem 'datagrid'
 
-gem 'gmaps4rails'
-
 gem 'haml'
 
 gem 'json'
@@ -41,7 +39,6 @@ group :assets do
   # gem 'therubyracer'
 
   gem 'uglifier', '>= 1.0.3'
-  gem 'bootstrap-sass'
 end
 
 gem 'jquery-rails'

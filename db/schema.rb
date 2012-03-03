@@ -10,7 +10,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120227134005) do
+ActiveRecord::Schema.define(:version => 20120303181945) do
+
+  create_table "contacts", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "gritter_notices", :force => true do |t|
+    t.integer  "owner_id",     :null => false
+    t.string   "owner_type",   :null => false
+    t.text     "text",         :null => false
+    t.text     "options",      :null => false
+    t.datetime "delivered_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "gritter_notices", ["owner_id", "delivered_at"], :name => "index_gritter_notices_on_owner_id_and_delivered_at"
 
   create_table "mains", :force => true do |t|
     t.string   "name"
