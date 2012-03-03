@@ -4,7 +4,7 @@
     -Dir.foreach(Rails.root.join('app', 'assets', 'gallery').to_s) do |x|
       -if x!='.' && x!='..'
         %a{:href => [root_path]}
-          %img{:src => [asset_path "gallery/" + x], :alt => '', :title => '#htmlcaption'}
+          %img{:src => [asset_path x], :alt => '', :title => '#htmlcaption'}
   .nivo-html-caption{:id => "htmlcaption"}
     %p
       НАНОКЕРАМИКА
