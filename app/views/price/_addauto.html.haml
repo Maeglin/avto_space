@@ -1,0 +1,11 @@
+= simple_form_for :auto, :remote => true, :url => { :action => "create_auto" }, :html => { :method => :post, :id => "ajaxform"} do |f|
+  %fieldset{:id => "field"}
+    = f.error :name, :id => "name_error"
+    %p
+      = f.label :some, :label => "Введите названия машин через запятую"
+    %p
+      = f.text_area :name, :cols => 55, :rows => 10, :label => "Названия авто", :error_html => { :id => "name_error"}
+    %p
+      = collection_select(:auto, :type_id, Type.all, :id, :name)
+    %p
+      = f.submit "Отправить", :id => "btn"

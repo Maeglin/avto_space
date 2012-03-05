@@ -1,0 +1,22 @@
+%h2
+  Добавить тип
+=render 'addtype'
+%h2
+  Добавить машины к типу
+=render 'addauto'
+
+:javascript
+  $('form#ajaxform').bind('ajax:beforeSend', function() {
+     $('#btn').attr('disabled', 'disabled');
+     $('#btn').css('cursor', 'default');
+     $('#btn:hover').css('background-color', '#ededed');
+     $('#btn').val('Отправляется...');
+   });
+  $('form#ajaxform').bind('ajax:complete', function() { 
+    $().toastmessage('showSuccessToast', 'Сообщение успешно отправлено.');
+    $('#btn').css('cursor', 'pointer');
+    $('#btn').removeAttr("disabled"); 
+    $('#btn').val('Отправить');
+    $('#btn:hover').css('background-color','#ffffff');
+    $('#message_text').val('');
+  });

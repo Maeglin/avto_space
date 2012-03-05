@@ -1,7 +1,8 @@
 = simple_form_for :message, :remote => true, :url => { :action => "create" }, :html => { :method => :post, :id => "ajaxform"} do |f|
   %fieldset{:id => "field"}
-    = f.input :name, :label => "Логин", :placeholder => 'name', :error_html => { :id => "name_error"}, :input_html => {:size => 20}
     = f.error :name, :id => "name_error"
-    = f.input  :email, :placeholder => 'user@domain.com', :label => "Email", :input_html => {:size => 20}
+    = f.input :name, :label => "Логин", :placeholder => 'name', :error_html => { :id => "name_error"}, :input_html => {:size => 20}
+    %p
+      = f.input  :email, :placeholder => 'user@domain.com', :label => "Email", :input_html => {:size => 20}
     = f.text_area :text, :cols => 55, :rows => 10
     = f.submit "Отправить", :id => "btn"

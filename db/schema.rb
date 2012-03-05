@@ -10,7 +10,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120303181945) do
+ActiveRecord::Schema.define(:version => 20120305144158) do
+
+  create_table "autos", :force => true do |t|
+    t.string   "name"
+    t.integer  "type_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "contacts", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -32,6 +39,26 @@ ActiveRecord::Schema.define(:version => 20120303181945) do
   create_table "mains", :force => true do |t|
     t.string   "name"
     t.text     "content"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "services", :force => true do |t|
+    t.string   "name"
+    t.text     "text"
+    t.string   "img"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "types", :force => true do |t|
+    t.string   "name"
+    t.integer  "clean_m"
+    t.integer  "clean_n"
+    t.integer  "clean_b"
+    t.integer  "resto"
+    t.integer  "defend"
+    t.integer  "ceramic"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

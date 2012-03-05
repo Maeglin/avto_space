@@ -1,0 +1,19 @@
+= simple_form_for :type, :url => { :action => "create_type" }, :remote => true, :html => { :method => :post, :id => "ajaxform"} do |f|
+  %fieldset{:id => "field"}
+    = f.error :name, :id => "name_error"
+    %p
+      = f.input :name, :label => "Название типа", :error_html => { :id => "name_error"}, :input_html => {:size => 15}
+    %p
+      = f.input :clean_m, :label => "Химчистка малая", :error_html => { :id => "name_error"}, :input_html => {:size => 15}
+    %p
+      = f.input :clean_n, :label => "Химчистка средняя", :error_html => { :id => "name_error"}, :input_html => {:size => 15}
+    %p
+      = f.input :clean_b, :label => "Химчистка сильная", :error_html => { :id => "name_error"}, :input_html => {:size => 15}
+    %p
+      = f.input :resto, :label => "Восст. полировка", :error_html => { :id => "name_error"}, :input_html => {:size => 15}
+    %p
+      = f.input :defend, :label => "Защитная полировка", :error_html => { :id => "name_error"}, :input_html => {:size => 15}
+    %p
+      = f.input :ceramic, :label => "Полимерная керамика", :error_html => { :id => "name_error"}, :input_html => {:size => 15}
+    %p
+      = f.submit "Отправить", :id => "btn"

@@ -1,0 +1,9 @@
+= simple_form_for :auto, :remote => true, :url => { :action => "calc" }, :html => { :method => :post, :id => "ajaxform"} do |f|
+  %fieldset{:id => "field"}
+    = f.error :name, :id => "name_error"
+    .field
+      = f.collection_select :type_id, Type.all, :id, :name
+    .field
+      = f.grouped_collection_select :auto_id, Type.all, :autos, :name, :id, :name
+    %p
+      = f.submit "Рассчет", :id => "btn"

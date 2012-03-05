@@ -1,15 +1,34 @@
 AvtoSpace::Application.routes.draw do
+  get "services/new"
+
+  get "services/edit"
+
+  get "services/article"
+
+  get "services/index"
+
   get "development/index"
 
   resources :contacts
+  
+  resources :autos
+  
+  #get :autocomplete_auto_name, :on => "prices#autocomplete_auto_name"
 
   get "contacts/index"
+  
+  get "price/add"
 
   get "main/index"
   resources :contacts, :only => [:new, :create]
   root :to => "main#index"
   match "contacts/" => "contacts#index"
   match "nopage/" => "development#index"
+  match "services/" => "services#index"
+  match "price/add" => "price#add"
+  match "price/" => "price#index"
+  match "price/create_type" => "price#create_type"
+  match "price/create_auto" => "price#create_auto"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

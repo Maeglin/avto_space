@@ -1,0 +1,7 @@
+= simple_form_for :article, :url => { :action => "create" }, :html => { :method => :post } do |f|
+  %fieldset{:id => "field"}
+    = f.input :name, :label => "Название", :placeholder => 'name', :error_html => { :id => "name_error"}, :input_html => {:size => 20}
+    = f.error :name, :id => "name_error"
+    = f.file_field :img
+    = f.text_area :text, :cols => 55, :rows => 10
+    = f.submit "Отправить", :id => "btn"

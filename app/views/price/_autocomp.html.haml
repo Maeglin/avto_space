@@ -1,0 +1,8 @@
+= simple_form_for :auto, :remote => true, :url => { :action => "calc" }, :html => { :method => :post, :id => "ajaxform"} do |f|
+  %fieldset{:id => "field"}
+    = f.error :name, :id => "name_error"
+    .field
+      = f.input :name
+      = f.input :auto_name, :url => "price#autocomplete_auto_name", :as => :autocomplete
+    %p
+      = f.submit "Рассчет", :id => "btn"

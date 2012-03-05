@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  clean_m: 1
+  clean_n: 1
+  clean_b: 1
+  resto: 1
+  defend: 1
+  ceramic: 1
+
+two:
+  name: MyString
+  clean_m: 1
+  clean_n: 1
+  clean_b: 1
+  resto: 1
+  defend: 1
+  ceramic: 1
