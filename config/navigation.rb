@@ -72,7 +72,7 @@ SimpleNavigation::Configuration.run do |navigation|
     # primary.auto_highlight = false
     primary.item :index, 'Главная', root_path
     primary.item :company, 'Компания', "/nopage"
-    primary.item :service, 'Услуги', services_path
+    primary.item :service, 'Услуги', "/nopage"
     primary.item :tech, 'Технологии', "/nopage"
     primary.item :photo, 'Фото', "/nopage"
     primary.item :video, 'Видео', "/nopage"

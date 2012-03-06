@@ -14,6 +14,8 @@ gem 'resque_mailer'
 
 gem 'mini_magick'
 
+gem 'passenger'
+
 gem 'simple-navigation'
 
 gem 'therubyracer'
