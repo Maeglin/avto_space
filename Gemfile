@@ -16,6 +16,8 @@ gem 'mini_magick'
 
 gem 'simple-navigation'
 
+gem 'therubyracer'
+
 gem 'datagrid'
 
 gem 'haml'
