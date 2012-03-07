@@ -1,5 +1,4 @@
 class PriceController < ApplicationController
-  autocomplete :auto, :name
   def index
     
   end

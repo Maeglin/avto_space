@@ -26,11 +26,7 @@ gem 'haml'
 
 gem 'json'
 
-gem 'compass'
-
 gem 'haml-rails'
-
-gem 'rails3-jquery-autocomplete'
 
 gem 'sqlite3'
 
