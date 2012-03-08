@@ -23,39 +23,77 @@
 }
 
 #ajaxform{
-  fieldset{
-    width: 405px;
+  width: 450px;
+  fieldset{ 
+    border: none;
+    width: 100%;
     textarea{
+      border: none;
+      overflow-y: hidden;
       resize: none;
+      width: 100%;
     }
     abbr{
       display: none;
     }
+#reset_button{
+margin-top: 10px;
+-moz-border-radius:15px;
+-webkit-border-radius:15px;
+border-radius:15px;
+background:#2db9fa; 
+background: -moz-linear-gradient(top, #2db9fa 0%, #48b3e8 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2db9fa), color-stop(100%,#48b3e8));;
+filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#2db9fa', endColorstr='#48b3e8',GradientType=0 );
+border:1px solid black;
+box-shadow:0 1px 3px rgba(0,0,0,0.6);
+-moz-box-shadow:0 1px 3px rgba(0,0,0,0.6);
+-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.6);
+text-shadow:0 -1px 1px rgba(0,0,0,0.3);
+color:#FFFFFF;
+padding:7px;
+font-size:18px;
+cursor:pointer;
+width:200px;
+height:45px;
+text-align:center;
+display:block;
+float: left;
+margin-left: 0px;
+}
+#btn{
+float:right;
+margin-top: 10px;
+-moz-border-radius:15px;
+-webkit-border-radius:15px;
+border-radius:15px;
+background:#2db9fa; 
+background: -moz-linear-gradient(top, #2db9fa 0%, #48b3e8 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2db9fa), color-stop(100%,#48b3e8));;
+filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#2db9fa', endColorstr='#48b3e8',GradientType=0 );
+border:1px solid black;
+box-shadow:0 1px 3px rgba(0,0,0,0.6);
+-moz-box-shadow:0 1px 3px rgba(0,0,0,0.6);
+-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.6);
+text-shadow:0 -1px 1px rgba(0,0,0,0.3);
+color:#FFFFFF;
+padding:7px;
+font-size:18px;
+cursor:pointer;
+width:200px;
+height:45px;
+text-align:center;
+display:block;
+}
   }
   padding-bottom: 50px;
 }
 
 #message_name{
-  margin-left: 0.7em;
+  float: right;
+  margin-right: 230px;
 }
 
 #message_email{
-  margin-left: 1.15em;
+  float: right;
+  margin-right: 230px;
 }
 
-#btn{
-  -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
-  -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
-  box-shadow:inset 0px 1px 0px 0px #ffffff;
-  text-shadow:1px 1px 0px #ffffff;
-  background-color:#ededed;
-  border:1px solid #dcdcdc;
-  color:#777777;
-  padding:6px 24px;
-  margin: 0 auto;
-  cursor:pointer;
-  width: 405px;
-  &:hover{
-    background-color:#ffffff;
-  }
-}
