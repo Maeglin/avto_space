@@ -1,9 +1,14 @@
-= simple_form_for :auto, :remote => true, :url => { :action => "calc" }, :html => { :method => :post, :id => "ajaxform"} do |f|
+= simple_form_for :auto, :remote => true, :url => { :action => "calc" }, :html => { :method => :post, :id => "calcform"} do |f|
   %fieldset{:id => "field"}
     = f.error :name, :id => "name_error"
     .field
-      = f.collection_select :type_id, Type.all, :id, :name
+      = f.collection_select :type_id, Type.all, :id, :name, {:prompt => 'Все типы'}, {:size => Type.all.count + 1}
     .field
-      = f.grouped_collection_select :auto_id, Type.all, :autos, :name, :id, :name
+      = f.grouped_collection_select :auto_id, Type.all, :autos, :name, :id, :name, {}, {:size => Type.all.count + 1}
+    .field
+      -@services.each do |service|
+        = check_box_tag "auto[services][]", service[1]
+        = service[0]
+        %br
     %p
       = f.submit "Рассчет", :id => "btn"

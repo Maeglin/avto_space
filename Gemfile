@@ -20,9 +20,11 @@ gem 'simple-navigation'
 
 gem 'therubyracer'
 
-gem 'datagrid'
+gem 'simple_datatables'
 
 gem 'haml'
+
+gem 'fastercsv'
 
 gem 'json'
 

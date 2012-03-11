@@ -1,0 +1,61 @@
+// Place all the styles related to the contacts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#YMapsID{
+  width: 600px;
+  height: 400px;
+  color: black;
+  float: right;
+  width: 50%;
+}
+
+#info{
+  float: left;
+  width: 50%;
+  span{
+    font-size: 1.5em;
+  }
+}
+
+.cont_title{
+  font-size: 1.5em;
+}
+
+#ajaxform{
+  fieldset{
+    width: 100%;
+    textarea{
+      resize: none;
+    }
+    abbr{
+      display: none;
+    }
+  }
+  padding-bottom: 50px;
+}
+
+#message_name{
+  margin-left: 0.7em;
+}
+
+#message_email{
+  margin-left: 1.15em;
+}
+
+#btn{
+  -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+  -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+  box-shadow:inset 0px 1px 0px 0px #ffffff;
+  text-shadow:1px 1px 0px #ffffff;
+  background-color:#ededed;
+  border:1px solid #dcdcdc;
+  color:#777777;
+  padding:6px 24px;
+  margin: 0 auto;
+  cursor:pointer;
+  width: 405px;
+  &:hover{
+    background-color:#ffffff;
+  }
+}

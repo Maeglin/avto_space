@@ -1,34 +1,23 @@
 // Place all the styles related to the price controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-#field{
-  input{
-    float: right;
-  }
-  select{
+#calcform{
+  #field{
+    border: none;
     width: 100%;
+    .field{
+      display: inline-block; 
+    }
   }
 }
 
-ul.ui-autocomplete {
-  position: absolute;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  border: solid 1px #999;
-  cursor: default;
-  li {
-    background-color: #FFF;
-    border-top: solid 1px #DDD;
-    margin: 0;
-    padding: 0;
-    a {
-      color: #000;
-      display: block;
-      padding: 3px;
-    }
-    a.ui-state-hover, a.ui-state-active {
-      background-color: #FFFCB2;
-    }
-  }
-} 
+#list{
+  font-size: 10px;
+  border: 2px white solid;
+}
+
+#list th .current {
+  padding-right: 12px;
+  background-repeat: no-repeat;
+  background-position: right center;
+}

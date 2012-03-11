@@ -1,2 +1,8 @@
 =render 'form'
-=render 'autocomp'
+#summary
+  %p
+    0
+:javascript
+  $('form#calcform').bind('ajax:complete', function(evt, data, status, xhr) { 
+    alert(data.json);
+  });

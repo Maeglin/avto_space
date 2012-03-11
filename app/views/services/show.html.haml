@@ -1,0 +1,6 @@
+%p#notice= notice
+
+%p
+  %h1{:class => "page_title"}= @service.name
+%p
+  =@service.text.html_safe

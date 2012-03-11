@@ -77,9 +77,15 @@ $dark_yellow: #d0a825;
 $light_blue: #40627c;
 $dark_blue: #26393d;
 $light: #fffae4;
+//$gray: #161616;
+//$gray: #000033;
 $gray: #161616;
+$blue: #082D77;
 $black: #101010;
 $width: 1056px;
+//$logo: #DFDFDF;
+$logo: #d7ceb2;
+
 
 @mixin op($val) { 
   opacity: $val;
@@ -97,10 +103,20 @@ $width: 1056px;
 }
 
 body{
-  background-color: $gray;
+  //background-color: $gray;
   margin: 0px 0px 0px 0px;
   font-family: 'Open Sans', sans-serif;
   color: white;
+  background: -moz-linear-gradient($gray, $blue); /* FF 3.6+ */  
+  background: -ms-linear-gradient($gray, $blue); /* IE10 */  
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $gray), color-stop(100%, $blue)); /* Safari 4+, Chrome 2+ */  
+  background: -webkit-linear-gradient($gray, $blue); /* Safari 5.1+, Chrome 10+ */  
+  background: -o-linear-gradient($gray, $blue); /* Opera 11.10 */  
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$gray', endColorstr='$blue'); /* IE6 & IE7 */  
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='$gray', endColorstr='$blue')"; /* IE8+ */  
+  background: linear-gradient($gray, $blue); /* the standard */  
+  background-repeat:no-repeat;
+  background-attachment: fixed;
 }
 
 #logo{
@@ -128,11 +144,11 @@ body{
   	@include border_radius(5px);
   }
   a{
-    color: #DFDFDF;
+    color: $logo;
     font-size: 7em;
     text-decoration: none;
     &:hover{
-      color: #666666;
+      color: #FFFF59;
     }
     
     &:after{
@@ -180,17 +196,18 @@ body{
       display: inline;
       font-size: 1.3em;
       a{      
-        -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
-        -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
-        box-shadow:inset 0px 1px 0px 0px #ffffff;
-        text-shadow:1px 1px 0px #ffffff;
+        //-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+        //-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+        //box-shadow:inset 0px 1px 0px 0px #ffffff;
+        //text-shadow:1px 1px 0px #ffffff;
         background-color:#ededed;
         border:1px solid #dcdcdc;
         display:inline-block;
-        color:#777777;
+        color:#000000;
+        //color:#777777;
         padding:6px 24px;
-        color: #777777;
         text-decoration: none;
+        text-weight: bold;
         @include op(0.85);
         &:hover{
           background-color:#dfdfdf;

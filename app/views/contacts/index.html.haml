@@ -4,11 +4,11 @@
             var map = new YMaps.Map(YMaps.jQuery("#YMapsID")[0]);
 
             // Установка для карты ее центра и масштаба
-            map.setCenter(new YMaps.GeoPoint(37.436251, 55.711012), 15);
+            map.setCenter(new YMaps.GeoPoint(37.436251, 55.711012), 13);
 
             // Добавление меток на карту
             var placemark = new YMaps.Placemark(new YMaps.GeoPoint(37.436251, 55.711012));
-            placemark.name = "Авто Спейс";
+            placemark.name = "АвтоСпейс";
             placemark.description = "ул. Верейская, 29";
             map.addOverlay(placemark);
 
@@ -25,7 +25,7 @@
   %span Контакты
   %p Адрес: &nbsp;г.Москва, ул. Верейская, 29
   %p Телефон: &nbsp;+7 (495) 644-61-63, +7 (916) 310-19-84
-  %p Email:
+  %p Email: avtospace@yandex.ru
 
 #YMapsID
 
@@ -37,7 +37,6 @@
   $('form#ajaxform').bind('ajax:beforeSend', function() {
      $('#btn').attr('disabled', 'disabled');
      $('#btn').css('cursor', 'default');
-     $('#btn:hover').css('background-color', '#ededed');
      $('#btn').val('Отправляется...');
    });
   $('form#ajaxform').bind('ajax:complete', function() { 
@@ -45,6 +44,6 @@
     $('#btn').css('cursor', 'pointer');
     $('#btn').removeAttr("disabled"); 
     $('#btn').val('Отправить');
-    $('#btn:hover').css('background-color','#ffffff');
+
     $('#message_text').val('');
   });

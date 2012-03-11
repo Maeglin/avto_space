@@ -1,2 +1,6 @@
-%h1 Services#index
-%p Find me in app/views/services/index.html.haml
+-@services.each do |service|
+  .service
+    .service_title= link_to service.name, service
+    %br
+    .service_content= service.text
+    .readmore= link_to 'Подробнее', service

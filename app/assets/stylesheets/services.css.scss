@@ -1,3 +1,83 @@
-// Place all the styles related to the services controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.service{
+       vertical-align: top;
+       height: auto;
+       min-height: 58px;  
+       margin-left: 30px;
+       margin-right: 30px;
+       margin-top: 30px;
+       margin-bottom: 30px;  
+       -moz-border-radius: 4px;
+  	border-radius: 4px;
+  	padding: 2em 1.5em;
+  	color: rgba(0,0,0, 1);
+	background: #ddd;
+       position: relative;
+       width: 38%;
+       display: inline-block;
+	.service_title{
+	  a{      
+	    color: #000000;
+           font-size: 1.4em;
+           text-decoration: none;
+           &:hover{
+             color: #000000;
+             text-decoration: underline;
+           }
+	    &:visisted{
+             color: #000000;
+	    }
+	  }
+	}
+       .readmore{
+         text-align: right;
+	  a{      
+	    color: #037BA0;
+           text-decoration: none;
+           font-style: italic;
+           &:hover{
+             color: #037BA0;
+             text-decoration: underline;
+           }
+	    &:visisted{
+             color: #037BA0;
+	    }
+	  }
+	}
+}
+
+
+.service:before, .service:after
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+
+.service:after
+{
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+  right: 10px;
+  left: auto;
+}
+
+.page_title{
+   font-family: 'MaassslicerRegular';
+}
