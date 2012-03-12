@@ -113,3 +113,16 @@ div.dataTables_paginate.paging_bootstrap.pagination{
       }
 	}
 }
+
+p{
+  a{
+		color: #FBFF8C;
+		font-style: italic;
+		&:hover{
+			
+		}
+		&:visited{
+			color: #FBFF8C;
+		}
+	}
+}

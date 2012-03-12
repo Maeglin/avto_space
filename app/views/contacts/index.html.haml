@@ -5,12 +5,12 @@
             var map = new YMaps.Map(YMaps.jQuery("#YMapsID")[0]);
 
             // Установка для карты ее центра и масштаба
-            map.setCenter(new YMaps.GeoPoint(37.436251, 55.711012), 13);
+            map.setCenter(new YMaps.GeoPoint(37.438561, 55.709579), 13);
 
             // Добавление меток на карту
-            var placemark = new YMaps.Placemark(new YMaps.GeoPoint(37.436251, 55.711012));
+            var placemark = new YMaps.Placemark(new YMaps.GeoPoint(37.438561, 55.709579));
             placemark.name = "АвтоСпейс";
-            placemark.description = "ул. Верейская, 29";
+            placemark.description = "ул. Верейская, 29, стр. 34";
             map.addOverlay(placemark);
 
             // Открываем балун
