@@ -1,6 +1,8 @@
 // Place all the styles related to the price controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap.min.css";
+
 #calcform{
   #field{
     border: none;
@@ -90,8 +92,24 @@ div#pricelist_length.dataTables_length label{
 
 div.dataTables_paginate.paging_bootstrap.pagination{
 	float: right;
-}
-
-div.dataTables_paginate.paging_bootstrap.pagination{
-	height: auto;
+  height: auto;
+  ul{
+      li{
+      	background-color: #F5F5F5;
+  		}
+      li.active{
+      	a{
+				  color: black;
+				}
+      }
+      a{
+         color:white;
+         &:hover{
+				   color: black;
+         }
+         &.active{
+				   color: black;
+         }
+      }
+	}
 }

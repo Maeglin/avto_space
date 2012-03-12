@@ -3,9 +3,10 @@
 <head>
   <title>Авто Спейс</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag    controller.controller_name, :media => "all" %>
   <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag controller.controller_name %>
   <link rel="shortcut icon" href="<%= asset_path "favicon.ico" %>">
-  <script src="http://api-maps.yandex.ru/1.1/index.xml?key=AAQQUk8BAAAAgcF2LAIAr-6uJFLhTOvSjRx9Huf_s3fX04sAAAAAAAAAAACfPMhPF9E9vBmeEV8dXqXsm5vAVA==" type="text/javascript"></script>
   <%= csrf_meta_tags %>
     <!--[if lt IE 7]>
 	<style>

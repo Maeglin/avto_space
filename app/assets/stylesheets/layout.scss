@@ -1,7 +1,6 @@
 // Place all the styles related to the Main controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic&subset=latin,cyrillic);
 @font-face {
     font-family: 'Maassslicer3DRegular';
     src: url('maass_slicer_italic_3d-webfont.eot');
@@ -103,7 +102,7 @@ $logo: #d7ceb2;
 }
 
 body{
-  //background-color: $gray;
+  background-color: $blue;
   margin: 0px 0px 0px 0px;
   font-family: 'Open Sans', sans-serif;
   color: white;
@@ -112,10 +111,9 @@ body{
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $gray), color-stop(100%, $blue)); /* Safari 4+, Chrome 2+ */  
   background: -webkit-linear-gradient($gray, $blue); /* Safari 5.1+, Chrome 10+ */  
   background: -o-linear-gradient($gray, $blue); /* Opera 11.10 */  
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$gray', endColorstr='$blue'); /* IE6 & IE7 */  
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='$gray', endColorstr='$blue')"; /* IE8+ */  
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#161616', endColorstr='#082D77'); /* IE6 & IE7 */  
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#161616', endColorstr='#082D77')"; /* IE8+ */  
   background: linear-gradient($gray, $blue); /* the standard */  
-  background-repeat:no-repeat;
   background-attachment: fixed;
 }
 
