@@ -76,7 +76,7 @@ SimpleNavigation::Configuration.run do |navigation|
     primary.item :tech, 'Технологии', "/nopage"
     primary.item :photo, 'Фото', "/nopage"
     primary.item :video, 'Видео', "/nopage"
-    primary.item :price, 'Цены', "/nopage"
+    primary.item :price, 'Цены', price_path
     primary.item :contacts, 'Контакты ', contacts_path
   end
 
