@@ -1,4 +1,14 @@
 AvtoSpace::Application.routes.draw do
+  get "company/index"
+
+  get "photos/index"
+
+  get "photos/add"
+
+  get "photos/remove"
+
+  get "photos/edit"
+
   resources :services
 
   get "services/new"
@@ -23,11 +33,12 @@ AvtoSpace::Application.routes.draw do
   resources :contacts, :only => [:new, :create]
   root :to => "main#index"
   match "contacts/" => "contacts#index"
-  match "contacts/" => "contacts#index"
+  match "company/" => "company#index"
   match "services/create" => "services#create"
   match "nopage/" => "development#index"
   match "services/" => "services#index"
   match "price/add" => "price#add"
+  match "photos" => "photos#index"
   match "price/" => "price#index"
   match "price/calc" => "price#calc"
   match "price/create_type" => "price#create_type"
